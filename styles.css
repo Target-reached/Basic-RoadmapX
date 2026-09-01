@@ -1,0 +1,1180 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.whole-site-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(9, 9, 33);
+    font-family: roboto;
+    padding: 10px;
+}
+
+.site-name {
+    color: rgb(221, 216, 216);
+}
+
+.basic-page {
+    min-height: 100vh;
+}
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.mobile-menu-btn,
+.brand-logo {
+    height: 25px;
+}
+
+.mobile-menu-btn {
+    display: none;
+}
+
+.branding-bar-top {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.brand-logo-name {
+    width: 20%;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.hero-section {
+    border-radius: 10px;
+    min-height: 480px;
+    box-shadow: 0px 0px 5px aqua;
+    padding: 10px;
+}
+
+.special-text {
+    background: linear-gradient(135deg, rgb(158, 234, 247), rgb(246, 249, 249), rgb(80, 206, 241), rgb(253, 157, 83));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.hero-section {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(250, 250, 250);
+
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("Application Media/Images/hero-bg-img.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-section-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    border: none;
+}
+
+.start-jrny-btn {
+    height: 40px;
+    width: 100%;
+    border-radius: 15px;
+    background-color: rgb(207, 192, 255);
+    font-size: 1.1rem;
+    color: rgb(7, 7, 7);
+    box-shadow: 0px 0px 5px aqua;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.start-jrny-btn:focus {
+    background-color: aqua;
+}
+
+.start-jrny-btn:hover {
+    background-color: rgb(214, 245, 245);
+    color: black;
+}
+
+.site-objectives {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: rgb(210, 206, 206);
+    box-shadow: 0px 0px 5px rgb(148, 148, 248);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+.objective-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.8rem;
+    justify-content: space-around;
+
+}
+
+.objective-box img {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 4px;
+}
+
+.job-selection-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 50px;
+    color: white;
+    border: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.job-selection-qstn-box {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.job-selection-qstn-box h3 {
+    font-size: 1.5rem;
+    color: rgb(233, 239, 244);
+}
+
+.job-selection-qstn-box {
+    text-align: center;
+    color: rgb(152, 154, 154);
+    border: none;
+}
+
+.jobs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    padding: 10px;
+    row-gap: 15px;
+    column-gap: 15px;
+    border: none;
+}
+
+.job-role img {
+    height: 50px;
+    width: 50px;
+    border: none;
+}
+
+.job-role {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    text-align: center;
+    border: none;
+    box-shadow: 0px 0px 120px rgb(114, 185, 216);
+    border-radius: 10px;
+    padding: 5px;
+    transition: all 0.5s ease;
+    border: 1px solid;
+    cursor: pointer;
+}
+
+.skills-declaration-page {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding: 10px;
+}
+
+.about-user-skills {
+    text-align: center;
+    color: rgb(248, 220, 119);
+}
+
+.user-experience {
+    color: rgb(222, 250, 150);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.role-title {
+    cursor: pointer;
+    text-align: center;
+    background: linear-gradient(135deg, aqua, rgb(242, 242, 236), rgb(246, 242, 240));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    font-style: italic;
+
+
+}
+
+.user-position {
+    min-height: 100px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.role-box {
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 15px;
+    box-shadow: 0px 5px 100px rgb(148, 220, 198);
+    border-radius: 10px;
+
+}
+
+.optionsBox {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    gap: 5px;
+    transition: all 0.3s ease;
+}
+
+.optionsBox button {
+    padding: 3px 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(205, 207, 240);
+
+}
+
+.skill-box h4 {
+    font-style: italic;
+    color: rgb(156, 156, 250);
+}
+
+.skill-box p {
+    color: rgb(171, 247, 79);
+    font-style: italic;
+}
+
+.skill-options {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+}
+
+.skill-options button {
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0px 0px 3px orange;
+    color: white;
+}
+
+.selected-level {
+    background-color: rgb(117, 161, 250) !important;
+    color: black !important;
+}
+
+.assmnt-status {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+}
+
+.proceed-btn {
+    padding: 5px 10px;
+    border: none;
+    width: 50%;
+    background-color: rgb(136, 246, 121);
+    align-self: center;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+
+}
+
+.proceed-btn:hover {
+    background-color: aqua;
+}
+
+.roadmap-display-page {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    opacity: 0;
+    padding: 10px;
+    gap: 20px;
+}
+
+
+
+h3 {
+    text-align: center;
+    color: rgb(158, 251, 251);
+}
+
+.nav-page {
+    min-height: 100vh;
+    transition: all 0.5s ease;
+    opacity: 0;
+    color: rgb(249, 247, 247);
+}
+
+.home-page {
+    opacity: 1;
+    color: rgb(216, 212, 212);
+}
+
+.all-skills-count {
+    margin-top: 10px;
+    font-style: normal;
+    color: rgb(244, 156, 250);
+    font-size: 1.2rem;
+}
+
+.nav-bar {
+    color: white;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    background-color: black;
+    border: 1px solid;
+}
+
+.nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+.nav-btn img {
+    height: 25px;
+    width: 25px;
+}
+
+.skills-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 0px 5px aqua;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.skill-info-box {
+    padding: 10px;
+    text-align: center;
+}
+
+.skill-info-box p {
+    text-align: left;
+    font-size: 1rem;
+    box-shadow: 0px 0px 90px rgb(126, 216, 243);
+    background-color: transparent;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.role-info {
+    display: flex;
+    flex-direction: column;
+    font-style: italic;
+    color: rgb(93, 224, 56);
+}
+
+.download-rdmp {
+    align-self: center;
+    padding: 5px 15px;
+    background-color: rgb(185, 241, 253);
+    border: none;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    visibility: hidden;
+}
+
+.learning-task-info {
+    margin-top: 20px;
+}
+
+.ctgry-h h3 {
+    color: rgb(184, 203, 252);
+}
+
+.skills-lrn,
+.skills-dvlp,
+.skills-strng {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skills-lrn {
+    color: orange;
+    gap: 5px;
+
+}
+
+.skills-lrn p,
+.skills-dvlp p,
+.skills-strng p {
+    padding: 5px;
+}
+
+
+.skills-dvlp {
+    color: yellow;
+}
+
+.skills-strng {
+    color: rgb(120, 243, 137);
+}
+
+.infobox {
+    box-shadow: 0px 0px 5px white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.infobox:hover {
+    background-color: rgb(55, 57, 57);
+    color: white;
+
+}
+
+.nxt-task {
+    margin-bottom: 60px;
+    padding: 10px;
+    box-shadow: 0px 0px 5px red;
+}
+
+
+.nxt-task>h4 {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.nxt-task>div {
+    margin-top: 20px;
+    padding: 5px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.skill-name {
+    font-weight: normal;
+    font-family: monospace;
+    font-size: 1rem;
+}
+
+.learning-page {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skill-holder {
+    display: flex;
+    align-items: center;
+    border: 1px solid;
+    gap: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.skill-holder:hover {
+    background-color: rgb(161, 250, 253);
+    color: rgb(11, 11, 11);
+}
+
+.dflt-rsrc-hdng {
+    color: yellow;
+    text-align: left;
+}
+
+.dflt-prjct-hdng {
+    color: yellow;
+    text-align: left;
+}
+
+.learning-task-info h3 {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    color: aqua;
+
+}
+
+.topics-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 10px;
+    color: rgb(145, 192, 246);
+    box-shadow: 0px 0px 5px rgb(88, 239, 106);
+    border-radius: 10px;
+    margin-bottom: 100px;
+
+}
+
+.rsrc-page {
+    padding: 10px;
+    line-break: break-all;
+    word-break: break-all;
+}
+
+.building-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    box-shadow: 0px 0px 5px yellow;
+    border-radius: 10px;
+    padding: 30px;
+    color: rgb(0, 255, 136);
+    gap: 10px;
+}
+.skill-holder{
+    width: 100%;
+}
+
+.projects-container p {
+    padding: 5px;
+}
+
+.projects-container h4 {
+    text-align: left;
+}
+
+.progress-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+}
+
+.progress {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    justify-content: center;
+    gap: 20px;
+    box-shadow: 0px 0px 10px orange;
+    border-radius: 10px;
+}
+
+.t-prgrs-heading {
+    color: rgb(100, 242, 100);
+}
+
+.p-prgrs-heading {
+    color: orange;
+}
+
+.topics-progress,
+.projects-progress {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.t-outer-circle,
+.p-outer-circle {
+    height: 130px;
+    width: 130px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(140, 183, 252);
+
+}
+
+.t-inner-circle,
+.p-inner-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90%;
+    width: 90%;
+    border-radius: 50%;
+    text-align: center;
+    background-color: black;
+
+}
+
+.topics-count {
+    text-align: center;
+    color: rgb(0, 229, 255);
+    margin-bottom: 10px;
+}
+
+.projects-count {
+    color: rgb(0, 229, 255);
+    text-align: center;
+}
+
+.profile-page {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    justify-content: space-around;
+}
+
+.social-links-container {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(193, 152, 249);
+    color: black;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.links-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 10px;
+
+}
+
+.link_box img {
+    height: 25px;
+    width: 25px;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.link_box img:hover {
+    transform: translateY(3px);
+}
+
+.log-out {
+    height: 30px;
+    width: 50%;
+    align-self: center;
+    background-color: rgb(250, 157, 157);
+    border: none;
+    cursor: pointer;
+}
+
+.log-out:hover {
+    background-color: red;
+}
+.nav-bar{
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+}
+
+
+
+
+
+@media screen and (min-width:426px) {
+    .whole-site-container {
+        background-color: rgb(17, 15, 48);
+    }
+
+    .landing-page {
+        justify-content: space-around;
+    }
+
+    .brand-logo-name {
+        font-size: 1.8rem;
+
+    }
+
+    .site-name {
+        color: rgb(142, 227, 247);
+    }
+
+    .start-jrny-btn {
+        background-color: rgb(182, 253, 254);
+    }
+
+    .start-jrny-btn:hover {
+        background-color: rgb(103, 248, 200);
+    }
+
+    .hero-section {
+        padding: 15px;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)),
+            url("Application Media/Images/hero-bg-img.jpg");
+    }
+
+    .site-objectives {
+        padding: 15px;
+    }
+
+    .objective-box p {
+        font-size: 1rem;
+    }
+
+    .job-role {
+        animation: glow-effect 3s ease infinite;
+        transition: all 0.5s ease;
+        padding: 10px;
+    }
+
+    .job-role:hover {
+        transform: translateY(6px);
+    }
+
+    .about-user-skills {
+        color: rgb(246, 203, 124);
+    }
+
+    .user-experience {
+        color: rgb(249, 137, 137);
+    }
+
+    .role-title {
+        font-size: 1.2rem;
+    }
+
+    .role-box {
+        box-shadow: 0px 5px 100px rgb(109, 154, 154);
+    }
+
+    .optionsBox button {
+        background-color: rgb(175, 223, 251);
+        cursor: pointer;
+    }
+
+    .ctgry-h {
+        gap: 15px;
+    }
+
+    .nav-bar {
+        position: absolute;
+        width: 100%;
+        left: 0px;
+        justify-content: space-around;
+        background-color: transparent;
+    }
+
+    .skill-holder {
+        padding: 15px;
+    }
+    .log-out{
+        width: 20%;
+        background-color: rgb(255, 51, 0);
+        border-radius: 5px;
+    }
+
+    .social-links-container {
+        background-color: rgb(179, 255, 255);
+    }
+
+
+
+
+
+    /* animations here */
+    @keyframes glow-effect {
+        0% {
+            box-shadow: 0px 0px 120px rgb(0, 0, 0);
+
+        }
+
+        50% {
+            box-shadow: 0px 0px 120px rgb(92, 117, 119);
+
+        }
+
+        100% {
+            box-shadow: 0px 0px 120px rgb(0, 0, 0);
+
+        }
+    }
+
+
+}
+
+@media screen and (min-width:1024px) {
+    .whole-site-container {
+        background-color: rgb(3, 3, 3);
+    }
+
+    .landing-page {
+        background-image: url("Application Media/Images/lp-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        padding: 10px;
+    }
+
+    .hero-section {
+        background-image: url("Application Media/Images/lp-hero-bg.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 15px;
+        border: none;
+        box-shadow: none;
+    }
+    .hero-section-quote{
+        padding: 15px;
+    }
+
+    .hero-section p {
+        background: linear-gradient(135deg, aqua, yellow, white);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
+    }
+
+
+    .start-jrny-btn {
+        animation: glow-effect1 1s ease 3 2s;
+        width: 20%;
+        background-color: rgb(136, 242, 249);
+        border: none;
+    }
+
+    .start-jrny-btn:hover {
+        background-color: rgb(7, 7, 7);
+        color: white;
+        animation: glow-effect1 1s ease infinite;
+        cursor: pointer;
+    }
+
+    .site-objectives {
+        background-color: rgb(11, 11, 11);
+        justify-content: center;
+        gap: 100px;
+        box-shadow: -10px 10px 3px rgb(112, 108, 108);
+    }
+
+    .jobs-container {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+
+    }
+
+    .skills-declaration-page {
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+            url("Application Media/Images/lp-hero-bg.jpg");
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-height: 100vh;
+        overflow-y: auto;
+        transition: all 1s ease;
+    }
+
+    .about-user-skills {
+        font-size: 1.6rem;
+
+    }
+
+    .role-title {
+        margin-bottom: 10px;
+        transition: all 1s ease;
+        animation: highlight 1s ease 2;
+    }
+
+    .role-box {
+        width: 60%;
+        padding: 30px;
+        background-color: black;
+        box-shadow: 0px 0px 100px rgb(64, 70, 114);
+        border: 1px solid aqua;
+        cursor: context-menu;
+        animation: glow-effect 2s ease infinite;
+    }
+
+    .optionsBox {
+        padding: 10px;
+        transition: all 0.3s ease;
+    }
+
+    .optionsBox button {
+        width: 150px;
+        height: 30px;
+        transition: all 0.3s ease;
+        background-color: rgb(249, 189, 189);
+    }
+
+    .optionsBox button:hover {
+        background-color: bisque;
+    }
+
+    .proceed-btn {
+        width: 20%;
+        height: 50px;
+    }
+
+    .proceed-btn:hover {
+        box-shadow: -15px -10px 0px rgb(243, 239, 239);
+    }
+
+    .skill-info-box {
+        width: 30%;
+
+    }
+
+    .nxt-task {
+        display: grid;
+        column-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .nxt-task>div {
+        padding: 20px;
+        border-radius: 15px;
+        box-shadow: -5px -5px 0px;
+    }
+
+    .roadmap-display-page {
+        position: relative;
+
+    }
+
+    .ctgry-h {
+        max-height: 500px;
+        overflow-y: auto;
+    }
+
+    .nav-page>h3 {
+        margin-top: 60px;
+    }
+
+    .nav-bar img {
+        display: none;
+    }
+
+    .nav-bar {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        justify-content: flex-end;
+        gap: 20px;
+        height: 50px;
+        width: 100%;
+        align-items: flex-end;
+        background-color: transparent;
+        border: none;
+    }
+
+    .nav-btn {
+
+        padding: 5px 10px;
+        width: 100px;
+        transition: all 0.5s ease;
+    }
+
+    .nav-btn:hover {
+        background-color: rgb(149, 255, 255);
+        color: black;
+        /* border-bottom: 2px solid white; */
+        transform: translateY(-5px);
+        letter-spacing: 2px;
+        box-shadow: 8px 8px 0px white;
+        border-radius: 5px;
+    }
+
+
+
+    .learning-task-info {
+        margin-top: 100px;
+    }
+
+    .topics-container {
+        padding: 20px;
+        gap: 15px;
+        max-height: 600px;
+        overflow-y: auto;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)),
+            url("Application Media/Images/learning-bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .building-page {
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-image:
+            linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2)),
+            url("Application Media/Images/blding-bg.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .projects-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .progress {
+        margin-top: 150px;
+        height: 100%;
+        font-size: 1.2rem;
+    }
+
+    .t-outer-circle,
+    .p-outer-circle {
+        height: 150px;
+        width: 150px;
+    }
+
+    .progress-page {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .progress-info {
+        font-size: 1.2rem;
+        border: 1px solid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        padding: 15px;
+        box-shadow: 0px 0px 50px rgb(194, 244, 194);
+        border-radius: 15px;
+    }
+
+    .profile-page {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .log-out {
+        width: 30%;
+        border-radius: 15px;
+        height: 50px;
+        transition: all 0.3s ease;
+        font-size: 1.2rem;
+    }
+
+    .log-out:hover {
+        letter-spacing: 2px;
+        box-shadow: -20px -20px 0px rgb(250, 175, 175);
+    }
+
+    .social-links-container {
+        transition: all 0.3s ease;
+        width: 30%;
+    }
+    .social-links-container:hover{
+        box-shadow: -20px -20px 0px rgb(105, 245, 245);
+        background-color: rgb(149, 251, 137);
+    }
+
+    @keyframes highlight {
+        from {
+            opacity: 0;
+        }
+
+        to {
+            opacity: 1;
+        }
+
+    }
+
+    @keyframes glow-effect1 {
+        0% {
+            box-shadow: 0px 0px 50px rgb(0, 0, 0);
+
+        }
+
+        50% {
+            box-shadow: 0px 0px 50px rgb(136, 242, 249);
+
+        }
+
+        100% {
+            box-shadow: 0px 0px 50px rgb(0, 0, 0);
+
+        }
+    }
+
+}
+
+.display_none {
+    display: none;
+}
+
+.visibility_hidden {
+    opacity: 1;
+    visibility: hidden;
+    transition: all 0.5s ease;
+}
