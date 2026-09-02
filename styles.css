@@ -376,7 +376,7 @@ h3 {
 
 .nav-bar {
     color: white;
-    position: absolute;
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -817,11 +817,12 @@ h3 {
     }
 
     .nav-bar {
-        position: absolute;
+        position: fixed;
         width: 100%;
         left: 0px;
         justify-content: space-around;
         background-color: transparent;
+        background: linear-gradient(135deg,black,rgb(14, 13, 13),rgb(62, 61, 61),black,rgb(50, 47, 47));
     }
 
     .skill-holder {
