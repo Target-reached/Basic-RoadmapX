@@ -696,7 +696,7 @@ h3 {
     color: black;
     text-align: center;
     border-radius: 10px;
-    width: 50%;
+    width: 85%;
     align-self: center;
 }
 
@@ -849,6 +849,7 @@ footer{
 
     .social-links-container {
         background-color: rgb(179, 255, 255);
+        width:80%;
     }
 
 
@@ -1163,7 +1164,7 @@ footer{
 
     .social-links-container {
         transition: all 0.3s ease;
-        width: 30%;
+        width: 40%;
     }
 
     .social-links-container:hover {
