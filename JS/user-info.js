@@ -24,11 +24,11 @@ const skillsDeclarationpage = document.querySelector('.skills-declaration-page')
 const roadMapPage = document.querySelector('.roadmap-display-page');
 const roadmapContainer = document.querySelector('.roadmap-container');
 const proceedBtn = document.querySelector('.proceed-btn');
-function loadLandingPage(){
-    landingPage.style.opacity='0';
-    setTimeout(()=>{
-        landingPage.style.opacity='1';
-    },400)
+function loadLandingPage() {
+    landingPage.style.opacity = '0';
+    setTimeout(() => {
+        landingPage.style.opacity = '1';
+    }, 400)
 }
 loadLandingPage();
 function hideallSections() {
@@ -110,6 +110,7 @@ const projectsPage = document.querySelector('.projects-container');
 
 
 
+//function for creating a link for skills
 let selectedCareer = null;
 let userSkills = {};
 const s_learningSkills = [];
@@ -152,15 +153,42 @@ function displaySKills() {
 }
 function displaySkillGroups(skills, container) {
     skills.forEach(skill => {
-        const infoBox = document.createElement('p');
-        infoBox.className = 'infobox';
-        infoBox.textContent = `${skill}`;
-        container.append(infoBox);
-        infoBox.addEventListener('click', (e) => {
+        const courseCard = document.createElement('div');
+        courseCard.className = 'course-card';
+        const rsrcBox = document.createElement('div');
+        rsrcBox.className = 'rsrc-box';
+        const videoBtn = document.createElement('button');
+        videoBtn.className = 'video-btn';
+        videoBtn.textContent = `Video tutorial for ${skill}`;
+        const notesBtn = document.createElement('button');
+        notesBtn.className = 'notes-btn';
+        notesBtn.textContent = `Notes for ${skill}`;
+        rsrcBox.append(videoBtn, notesBtn);
+        const topicsBtn = document.createElement('button');
+        topicsBtn.classList = 'topics-btn';
+        topicsBtn.textContent = 'Reveal Topics'
+        const skillTitle = document.createElement('p');
+        skillTitle.className = 'infobox';
+        skillTitle.textContent = `${skill}`;
+        courseCard.append(skillTitle, rsrcBox, topicsBtn);
+        container.append(courseCard);
+        
+        // logic for opening respective vedio on youtube
+        videoBtn.onclick = () => {
+            const videoName = videoBtn.textContent.replace('Video tutorial for', '').toLowerCase().trim();
+            window.open(`https://www.youtube.com/results?search_query=${encodeURIComponent(videoName)}`, "_blank")
+        }
+        
+        //logic for opening the respective notes on GreeksforGreeks
+        notesBtn.onclick = () => {
+            window.open(`https://www.geeksforgeeks.org/search/?gq=${notesBtn.textContent.replace('Notes for', '').toLowerCase()}`, "_blank");
+        }
+        
+        topicsBtn.addEventListener('click', (e) => {
 
             projectsPage.innerHTML = `<h4 class='dflt-prjct-hdng'>You Need To Build These...</h4><br>`;
 
-            const clickedSkill = infoBox.textContent;
+            const clickedSkill = skillTitle.textContent;
 
             const level = userSkills[clickedSkill];
 
@@ -245,7 +273,7 @@ function createskillBox(eachSkill, appendTo, skill, type) {
     const skillHolder = document.createElement('div');
     skillHolder.className = 'skill-holder';
     skillHolder.append(checkBox, skilltitle);
-    
+
     appendTo.append(skillHolder);
 
 
@@ -254,7 +282,7 @@ function createskillBox(eachSkill, appendTo, skill, type) {
         const parentTopic = checkBox.dataset.Parenttopic;
 
         if (checkBox.checked) {
-            checkBox.title='Mark as incomplete ?'
+            checkBox.title = 'Mark as incomplete ?'
             if (type === 'topic') {
                 if (userProgress[parentTopic].completedTopics.includes(childTopic)) {
                     alert('Already Exists');
@@ -269,7 +297,7 @@ function createskillBox(eachSkill, appendTo, skill, type) {
                 userProgress[parentTopic].completedProjects.push(childTopic);
             }
         } else {
-            checkBox.title='Mark as complete?'
+            checkBox.title = 'Mark as complete?'
             if (type === 'topic') {
                 userProgress[parentTopic].completedTopics = userProgress[parentTopic].completedTopics.filter(topic => {
                     return topic !== childTopic
@@ -280,7 +308,7 @@ function createskillBox(eachSkill, appendTo, skill, type) {
                 });
                 console.log(userProgress[parentTopic].completedProjects);
             }
-            
+
 
         }
         setuserProgress(userProgress);
@@ -432,4 +460,3 @@ if (isOldUser.role_id) {
     openjobRole(cloudengineerRole);
     openjobRole(promptEngineerRole);
 }
-
