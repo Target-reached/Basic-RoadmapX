@@ -367,6 +367,46 @@ h3 {
     color: rgb(216, 212, 212);
 }
 
+.course-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 0px 5px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-color: rgb(13, 13, 14);
+
+}
+
+.rsrc-box {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.course-card button {
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(170, 213, 248);
+    font-size: 0.8rem;
+    font-family: roboto;
+    transition: all 0.3s ease;
+}
+
+.video-btn,
+.notes-btn {
+    width: 50%;
+    padding: 5px 8px;
+}
+
+.topics-btn {
+    padding: 5px 5px;
+    width: 50%;
+    align-self: center;
+}
+
 .all-skills-count {
     margin-top: 10px;
     font-style: normal;
@@ -477,21 +517,6 @@ h3 {
 
 .skills-strng {
     color: rgb(120, 243, 137);
-}
-
-.infobox {
-    box-shadow: 0px 0px 5px white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    border-top-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-
-}
-
-.infobox:hover {
-    background-color: rgb(55, 57, 57);
-    color: white;
-
 }
 
 .nxt-task {
@@ -741,7 +766,8 @@ h3 {
 .nav-btn:hover {
     cursor: pointer;
 }
-footer{
+
+footer {
     padding: 5px;
     background-color: black;
     color: white;
@@ -822,10 +848,18 @@ footer{
     .optionsBox button {
         background-color: rgb(175, 223, 251);
         cursor: pointer;
+
     }
 
     .ctgry-h {
         gap: 15px;
+    }
+
+    .video-btn,
+    .notes-btn,
+    .topics-btn {
+        width: 30%;
+        margin-top: 10px;
     }
 
     .nav-bar {
@@ -849,7 +883,7 @@ footer{
 
     .social-links-container {
         background-color: rgb(179, 255, 255);
-        width:80%;
+        width: 80%;
     }
 
 
@@ -1000,7 +1034,6 @@ footer{
 
     .skill-info-box {
         width: 30%;
-
     }
 
     .nxt-task {
@@ -1033,6 +1066,46 @@ footer{
     .ctgry-h {
         max-height: 500px;
         overflow-y: auto;
+    }
+
+    .course-card {
+        padding: 10px;
+        box-shadow: 0px 0px 5px white;
+        gap: 5px;
+    }
+
+    .rsrc-box {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        justify-content: space-around;
+        padding: 10px;
+    }
+
+    .course-card button {
+        background-color: rgb(252, 167, 252);
+    }
+
+    .video-btn,
+    .notes-btn,
+    .topics-btn {
+        min-height: 50px;
+        width: 100%;
+        padding: 5px 10px;
+        border: none;
+        border-radius: 10px;
+        transition: all 0.3s ease;
+        width: 100%;
+        cursor: pointer;
+        color: rgb(61, 59, 57);
+    }
+
+    .video-btn:hover,
+    .notes-btn:hover,
+    .topics-btn:hover {
+        background-color: rgb(162, 247, 177);
+        letter-spacing: 0.6px;
+        color: black;
     }
 
     .nav-page>h3 {
